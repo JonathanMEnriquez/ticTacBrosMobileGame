@@ -536,36 +536,71 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func resetButtonTapped(_ sender: Any) {
+        
+        gameOver = false
+        
+        //Go through each of the buttons and enable and through each of the labels and clear their colors
+        
+        b1.isEnabled = true
+        b1.backgroundColor = UIColor.clear
+        b2.isEnabled = true
+        b2.backgroundColor = UIColor.clear
+        b3.isEnabled = true
+        b3.backgroundColor = UIColor.clear
+        b4.isEnabled = true
+        b4.backgroundColor = UIColor.clear
+        b5.isEnabled = true
+        b5.backgroundColor = UIColor.clear
+        b6.isEnabled = true
+        b6.backgroundColor = UIColor.clear
+        b7.isEnabled = true
+        b7.backgroundColor = UIColor.clear
+        b8.isEnabled = true
+        b8.backgroundColor = UIColor.clear
+        b9.isEnabled = true
+        b9.backgroundColor = UIColor.clear
+        
+        //Clear the players' personal arrays
+        
+        bluePlayer.personalArr.removeAll()
+        redPlayer.personalArr.removeAll()
+        
+        //Set Turns to 0
+        turns = 0
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        b1.layer.borderColor = UIColor.black.cgColor
-        b1.layer.borderWidth = 0.5
+        b1.layer.borderColor = UIColor.white.cgColor
+        b1.layer.borderWidth = 2
         b1.layer.cornerRadius = 5
-        b2.layer.borderColor = UIColor.black.cgColor
-        b2.layer.borderWidth = 0.5
+        b2.layer.borderColor = UIColor.white.cgColor
+        b2.layer.borderWidth = 2
         b2.layer.cornerRadius = 5
-        b3.layer.borderColor = UIColor.black.cgColor
-        b3.layer.borderWidth = 0.5
+        b3.layer.borderColor = UIColor.white.cgColor
+        b3.layer.borderWidth = 2
         b3.layer.cornerRadius = 5
-        b4.layer.borderColor = UIColor.black.cgColor
-        b4.layer.borderWidth = 0.5
+        b4.layer.borderColor = UIColor.white.cgColor
+        b4.layer.borderWidth = 2
         b4.layer.cornerRadius = 5
-        b5.layer.borderColor = UIColor.black.cgColor
-        b5.layer.borderWidth = 0.5
+        b5.layer.borderColor = UIColor.white.cgColor
+        b5.layer.borderWidth = 2
         b5.layer.cornerRadius = 5
-        b6.layer.borderColor = UIColor.black.cgColor
-        b6.layer.borderWidth = 0.5
+        b6.layer.borderColor = UIColor.white.cgColor
+        b6.layer.borderWidth = 2
         b6.layer.cornerRadius = 5
-        b7.layer.borderColor = UIColor.black.cgColor
-        b7.layer.borderWidth = 0.5
+        b7.layer.borderColor = UIColor.white.cgColor
+        b7.layer.borderWidth = 2
         b7.layer.cornerRadius = 5
-        b8.layer.borderColor = UIColor.black.cgColor
-        b8.layer.borderWidth = 0.5
+        b8.layer.borderColor = UIColor.white.cgColor
+        b8.layer.borderWidth = 2
         b8.layer.cornerRadius = 5
-        b9.layer.borderColor = UIColor.black.cgColor
-        b9.layer.borderWidth = 0.5
+        b9.layer.borderColor = UIColor.white.cgColor
+        b9.layer.borderWidth = 2
         b9.layer.cornerRadius = 5
     }
 
@@ -592,7 +627,7 @@ class ViewController: UIViewController {
         if turns > 3 {
             
             if turns % 2 == 0 {
-                for (key, value) in winningConditions {
+                for (_, value) in winningConditions {
                     //variable needs to be three to win
                     var needThree = 0
                     
