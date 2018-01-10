@@ -122,14 +122,8 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T2Q-el-OUS">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-l1-D1r">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-ql-PIB">
-                                                        <rect key="frame" x="0.0" y="54.5" width="320" height="55"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                                                         <state key="normal" title="Button"/>
                                                     </button>
                                                 </subviews>

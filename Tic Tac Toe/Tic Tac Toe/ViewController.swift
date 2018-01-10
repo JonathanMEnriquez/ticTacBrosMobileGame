@@ -610,6 +610,17 @@ class ViewController: UIViewController {
                         }
                     }
                 }
+                print(turns)
+                
+                if (turns + 1) == 9 {
+                    print("too many")
+                    print(turns)
+                    let title = "Game's Over"
+                    let message = "No one is a winner"
+                    alertUser(title, message)
+                    gameOver = true
+                }
+                
                 return false
             }
             
@@ -621,8 +632,7 @@ class ViewController: UIViewController {
                     
                     let arr = value
                     for i in 0 ... redPlayer.personalArr.count - 1 {
-                        
-                        print(redPlayer.personalArr[i])
+                
                         
                         if redPlayer.personalArr[i] == arr[0] || redPlayer.personalArr[i] == arr[1] || redPlayer.personalArr[i] == arr[2] {
                             
@@ -635,6 +645,7 @@ class ViewController: UIViewController {
                         }
                     }
                 }
+                print (turns)
                 return false
             }
         }
